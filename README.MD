@@ -9,6 +9,8 @@ It is an Activities editor, to add, update and delete events. Users will eventua
     .Net Core 3.0.0 web api
         Entity Framework Code First
         SQL Lite (eventually Sql Azure)
+        Database seeding
+        Web Api
 
     React 16.8.6 front end
         Typescript

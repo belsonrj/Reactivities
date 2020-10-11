@@ -4,3 +4,4 @@ obj
 appsettings.json
 *.db
 migrations
+client-app/package-lock.json

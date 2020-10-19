@@ -4,3 +4,4 @@ obj
 *.db
 migrations
 client-app/package-lock.json
+client-app/node_modules

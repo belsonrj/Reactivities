@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Domain;
 using Microsoft.AspNetCore.Authorization;
@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
 
-namespace API.Controllers
+namespace DatingApp.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -19,8 +19,8 @@ namespace API.Controllers
         }
 
         // GET api/values
-        [HttpGet]
         [AllowAnonymous]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<Value>>> Get()
         {
             var values = await _context.Values.ToListAsync();
@@ -28,8 +28,8 @@ namespace API.Controllers
         }
 
         // GET api/values/5
-        [HttpGet("{id}")]
         [AllowAnonymous]
+        [HttpGet("{id}")]
         public async Task<ActionResult<Value>> Get(int id)
         {
             var value = await _context.Values.FindAsync(id);
@@ -37,18 +37,21 @@ namespace API.Controllers
         }
 
         // POST api/values
+        [AllowAnonymous]
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
         // PUT api/values/5
+        [AllowAnonymous]
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
         // DELETE api/values/5
+        [AllowAnonymous]
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
